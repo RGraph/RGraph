@@ -41,6 +41,6 @@ mpiexec -n machineNumber -hostfile pathToMachines release/toolkits/graph_analyti
 ## Publications
  -->
 ## Authors and Copyright
-RGraph is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Hanhua Chen ([chen@hust.edu.cn](chen@hust.edu.cn)), Yonghui Wang ([yhw@hust.edu.cn](yhw@hust.edu.cn)), Hai Jin (hjin@hust.edu.cn), Sijie Wu ([wsj@hust.edu.cn](wsj@hust.edu.cn)), Zhihao Jiang ([hustjiangzh@hust.edu.cn](hustjiangzh@hust.edu.cn)).
+RGraph is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Hanhua Chen (chen@hust.edu.cn), Yonghui Wang (yhw@hust.edu.cn), Hai Jin (hjin@hust.edu.cn), Sijie Wu ([wsj@hust.edu.cn](wsj@hust.edu.cn)), Zhihao Jiang (hustjiangzh@hust.edu.cn).
 
 Copyright (C) 2020, [STCS & CGCL](http://grid.hust.edu.cn/) and [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
