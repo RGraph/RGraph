@@ -18,29 +18,36 @@ Nodes in the cluster are connected by the RDMA network. When a graph processingj
 ## How to use?
 
 ### Enviroment
-We implement RGraph on a 20-node cluster. Each node in the cluster is equipped with a 16-core Intel 2.4GHz Xeon CPU, 64GB memory, 256GB HDD, 1,000 Mbps NIC, and a 56Gbps Mellanox InfiniBand NIC. The operating system is Red HatEnterprise Linux Server release 6.2.
+We implement RGraph on a 20-node cluster. Each node in the cluster is equipped with a 16-core Intel 2.4GHz Xeon CPU, 64GB RAM, 256GB HDD, 1Gbps NIC, and a 56Gbps Mellanox InfiniBand NIC. The operating system is Red Hat Enterprise Linux Server release 6.2.
 
 ### Initial Setting
 Configure the project and complie examples
-```txt
-./configure --no_jvm
-cd release/toolkits/graph_analytics
-make -j4
+```shell
+$ ./configure --no_jvm
+$ cd release/toolkits/graph_analytics
+$ make -j4
 ```
 
 Create a file, named machines, in the project source directory. Add the hostname of all computing machines into the file.
+```shell
+$ touch machines
+$ vi machines
+```
 
 ### Running Examples
 Switch the directory to the example directroy and running examples.
-```txt
-cd release/toolkits/graph_analytics
-mpiexec -n machineNumber -hostfile pathToMachines release/toolkits/graph_analytics/pagerank --format=snap --graph=graphData
+```shell
+$ cd release/toolkits/graph_analytics
+$ mpiexec -n machineNumber -hostfile pathToMachines release/toolkits/graph_analytics/pagerank --format=snap --graph=graphData
 ```
 
-<!-- 
-## Publications
- -->
-## Authors and Copyright
-RGraph is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Hanhua Chen (chen@hust.edu.cn), Yonghui Wang (yhw@hust.edu.cn), Hai Jin (hjin@hust.edu.cn), Sijie Wu ([wsj@hust.edu.cn](wsj@hust.edu.cn)), Zhihao Jiang (hustjiangzh@hust.edu.cn).
 
-Copyright (C) 2020, [STCS & CGCL](http://grid.hust.edu.cn/) and [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
+## Publications
+If you want to know more detailed information, please refer to this paper:
+
+Hanhua Chen, Jie Yuan, Hai Jin, Yonghui Wang, Sijie Wu, Zhihao Jiang. "RGraph: Asynchronous Graph Processing Based on Asymmetry of RDMA." Software Practice and Experience (SPE), 2021.
+
+## Authors and Copyright
+RGraph is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Hanhua Chen ([chen@hust.edu.cn](chen@hust.edu.cn)), Jie Yuan ([jieyuan@hust.edu.cn](jieyuan@hust.edu.cn)), Hai Jin ([hjin@hust.edu.cn](hjin@hust.edu.cn)), Yonghui Wang ([yhw@hust.edu.cn](yhw@hust.edu.cn)), Sijie Wu ([wsj@hust.edu.cn](wsj@hust.edu.cn)), Zhihao Jiang ([hustjiangzh@hust.edu.cn](hustjiangzh@hust.edu.cn)).
+
+Copyright (C) 2021, [STCS & CGCL](http://grid.hust.edu.cn/) and [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
